@@ -1,6 +1,8 @@
 body {
   text-align: center;
-  font-family: Arial;
+  font-family: 'Play', sans-serif;
+  background: #333333;
+  color: rgb(190, 189, 189);
 }
 
 h1 {
@@ -19,13 +21,18 @@ h2:first-of-type {
 table,
 tr,
 td {
-  border: 1px solid black;
+  border: 1px solid rgb(56, 186, 125);
 }
 
 table {
   border-collapse: collapse;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: black;
+  outline: #000000;
+}
+
+table:hover {
+  cursor: cell;
 }
 
 tr {
@@ -37,5 +44,71 @@ td {
 }
 
 input[type=number] {
-  width: 6em;
+  width: 3em;
+  background-color: rgb(199, 198, 198);
+  text-align: center;
+}
+
+/* gomb jon innentol !!!! */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  position: fixed;
+}
+
+i {
+  /* position: absolute; */
+  margin: 10px auto;
+  left: 8px;
+}
+
+.trash {
+  width: 54px;
+  height: 52px;
+  color: white;
+  font-size: 35px;
+  border-radius: 4px;
+  background: #000000;
+}
+
+.trash:hover, .container:hover {
+  color: rgb(56, 186, 125);
+  border-radius: 6px 0 0 6px;
+}
+
+.trash:hover + .arrow-right {
+  right: -8px;
+}
+
+.container:hover > .delete {
+  right: -120px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.arrow-right {
+  z-index: -1;
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #000000;
+  background: transparent;
+  position: absolute;
+  right: 0px;
+  transition: 1s;
+}
+
+.delete {
+  z-index: -2;
+  background: rgb(56, 186, 125);;
+  color: white;
+  position: absolute;
+  right: 4px;
+  transition: .7s;
+  max-height: 100%;
+  margin-left: 2px;
 }

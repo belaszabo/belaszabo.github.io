@@ -21,7 +21,7 @@ function makeGrid(rows, cols) {
 }
 
 function paint(cell) {
-    cell.setAttribute('style', 'background-color: ' + color.value);
+    cell.style.backgroundColor = color.value;
 }
 
 window.onload = function () {

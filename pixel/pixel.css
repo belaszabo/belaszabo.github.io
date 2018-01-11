@@ -65,7 +65,7 @@ i {
   left: 8px;
 }
 
-.trash {
+.make {
   width: 54px;
   height: 52px;
   color: white;
@@ -74,12 +74,12 @@ i {
   background: #000000;
 }
 
-.trash:hover, .container:hover {
+.make:hover, .container:hover {
   color: rgb(56, 186, 125);
   border-radius: 6px 0 0 6px;
 }
 
-.trash:hover + .arrow-right {
+.make:hover + .arrow-right {
   right: -8px;
 }
 
